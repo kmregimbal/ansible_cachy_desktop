@@ -1,0 +1,6 @@
+- name: Install common packages
+  pacman:
+    name: 
+      - htop
+      - screen
+      - uv

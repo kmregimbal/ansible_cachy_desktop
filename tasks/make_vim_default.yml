@@ -1,0 +1,9 @@
+- name: Make vim default editor system-wide
+  ansible.builtin.lineinfile:
+    path: /etc/environment
+    line: "EDITOR=vim"
+
+- name: make vim default editor system-wide too
+  ansible.builtin.lineinfile:
+    path: /etc/environment
+    line: "VISUAL=vim"

@@ -18,3 +18,4 @@
         - tasks/install_aur_package.yml
         - tasks/fix_mdns.yml
         - tasks/configure_cctv.yml
+        - tasks/make_vim_default.yml

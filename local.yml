@@ -15,4 +15,4 @@
     - name: Install pacman packages
       ansible.builtin.include_tasks: tasks/packages.yml
     - name: Install AUR packages
-      ansible.builtin.include_tasks: install_aur_package.yml
+      ansible.builtin.include_tasks: tasks/install_aur_package.yml

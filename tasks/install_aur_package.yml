@@ -1,6 +1,20 @@
+- name: Create aur_builder user
+  ansible.builtin.user:
+    name: aur_builder
+    create_home: true
+
+- name: Allow aur_builder to sudo pacman
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/aur_builder-allow-to-sudo-pacman
+    state: present
+    line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
+    create: true
+    validate: /usr/sbin/visudo -cf %s
+    mode: "0440"
+
 - name: Install AUR package
   kewlfft.aur.aur:
-    name: 
+    name:
       - visual-studio-code-bin
       - cctv-viewer-git
       - thonny
@@ -8,5 +22,6 @@
       - easyeda-pro-bin
       - brother-hll2300d
     state: latest
+    update: true
   become: true
-  became_user: aur_builder
+  become_user: aur_builder

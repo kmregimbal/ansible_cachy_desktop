@@ -13,6 +13,5 @@
     - name: Include tasks
       ansible.builtin.include_tasks:
         - tasks/fix_kevin_shell.yml
-        - tasks/create_aur_builder_user.yml
-        - tasks/packages.yml
-        - tasks/instal_aur_package.yml
+#        - tasks/packages.yml
+#        - tasks/instal_aur_package.yml

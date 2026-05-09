@@ -11,12 +11,10 @@
 
   tasks:
     - name: Fix Kevin Shell
-      ansible.builtin.include_tasks: tasks/fix_kevin_shell.yml
-    - name: Install pacman packages
-      ansible.builtin.include_tasks: tasks/packages.yml
-    - name: Install AUR packages
-      ansible.builtin.include_tasks: tasks/install_aur_package.yml
-    - name: Fix mdns (replace systemd-resolvd with avahi)
-      ansible.builtin.include_tasks: tasks/fix_mdns.yml
-    - name: Configure CCTV Viewer
-      ansible.builtin.include_tasks: tasks/configure_cctv.yml
+      ansible.builtin.include_tasks: "{{ item }}"
+      loop:
+        - tasks/fix_kevin_shell.yml
+        - tasks/packages.yml
+        - tasks/install_aur_package.yml
+        - tasks/fix_mdns.yml
+        - tasks/configure_cctv.yml

@@ -1,6 +1,10 @@
 - name: Install common packages
-  pacman:
-    name: 
-      - htop
+  ansible.builtin.package:
+    name:
       - screen
       - uv
+      - ansible
+      - ansible-lint
+      - telegram-desktop
+      - avahi
+    state: latest

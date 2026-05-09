@@ -1,13 +1,18 @@
-- hosts: localhost
+- name: Play for cachyos
+  hosts: localhost
   connection: local
   become: true
 
   pre_tasks:
-    - name: update repositories
-      pacman:
-        update_cache: yes
-      changed_when: False
+    - name: Update repositories
+      ansible.builtin.package:
+        update_cache: true
+      changed_when: false
 
   tasks:
-    - include_tasks: tasks/users.yml
-    - include_tasks: tasks/packages.yml
+    - name: Include tasks
+      ansible.builtin.include_tasks:
+        - tasks/fix_kevin_shell.yml
+        - tasks/create_aur_builder_user.yml
+        - tasks/packages.yml
+        - tasks/instal_aur_package.yml

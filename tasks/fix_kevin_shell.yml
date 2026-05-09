@@ -1,0 +1,4 @@
+- name: Fix kevin's shell
+  ansible.builtin.user:
+    name: kevin
+    shell: /bin/bash

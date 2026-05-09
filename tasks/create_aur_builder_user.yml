@@ -1,10 +1,13 @@
 - name: Create aur_builder user
-  user: name=aur_builder create_home=yes
+  ansible.builtin.user:
+    name: aur_builder
+    create_home: true
 
 - name: Allow aur_builder to sudo pacman
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/sudoers.d/aur_builder-allow-to-sudo-pacman
     state: present
     line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
-    create: yes
+    create: true
     validate: /usr/sbin/visudo -cf %s
+    mode: "0440"

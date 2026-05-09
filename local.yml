@@ -10,7 +10,7 @@
       changed_when: false
 
   tasks:
-    - name: Fix Kevin Shell
+    - name: Loop through various tasks
       ansible.builtin.include_tasks: "{{ item }}"
       loop:
         - tasks/fix_kevin_shell.yml

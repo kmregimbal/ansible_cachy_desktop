@@ -12,6 +12,7 @@
   tasks:
     - name: Fix Kevin Shell
       ansible.builtin.include_tasks: tasks/fix_kevin_shell.yml
-    - name: install pacman packages
+    - name: Install pacman packages
       ansible.builtin.include_tasks: tasks/packages.yml
-#        - tasks/instal_aur_package.yml
+    - name: Install AUR packages
+      ansible.builtin.include_tasks: install_aur_package.yml

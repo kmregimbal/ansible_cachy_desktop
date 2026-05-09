@@ -9,4 +9,3 @@
     path: /etc/nsswitch.conf
     line: "hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns"
     regexp: "^hosts: "
-#

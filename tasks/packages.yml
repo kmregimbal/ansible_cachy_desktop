@@ -9,4 +9,4 @@
       - avahi
       - vivaldi
       - tailscale
-    state: latest
+    state: present

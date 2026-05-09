@@ -1,0 +1,12 @@
+- name: Disable systemd-resolved MDNS
+  ansible.builtin.lineinfile:
+    path: /etc/systemd/resolved.conf
+    line: "MulticastDNS=no"
+  notify: restart_systemd_resolved
+
+- name: Add avahi to nsswitch
+  ansible.builtin.lineinfile:
+    path: /etc/nsswitch.conf
+    line: "hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns"
+    regexp: "^hosts: "
+#

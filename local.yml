@@ -18,3 +18,5 @@
       ansible.builtin.include_tasks: tasks/install_aur_package.yml
     - name: Fix mdns (replace systemd-resolvd with avahi)
       ansible.builtin.include_tasks: tasks/fix_mdns.yml
+    - name: Configure CCTV Viewer
+      ansible.builtin.include_tasks: tasks/configure_cctv.yml

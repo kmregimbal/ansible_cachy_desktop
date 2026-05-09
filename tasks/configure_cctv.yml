@@ -1,0 +1,4 @@
+- name: Configure CCTV Viewer
+  ansible.builtin.copy:
+    src: "files/CCTV Viewer.conf"
+    dst: "~/.config/CCTV Viewer/"

@@ -7,4 +7,5 @@
       - ansible-lint
       - telegram-desktop
       - avahi
+      - vivaldi
     state: latest

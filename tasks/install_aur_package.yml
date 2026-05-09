@@ -21,7 +21,7 @@
       - nordvpn-bin
       # - easyeda-pro-bin
       # - brother-hll2300d
-    state: latest
+    state: present
     update_cache: true
   become: true
   become_user: aur_builder

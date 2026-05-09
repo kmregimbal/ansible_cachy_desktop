@@ -22,6 +22,6 @@
       # - easyeda-pro-bin
       # - brother-hll2300d
     state: latest
-    update: true
+    update_cache: true
   become: true
   become_user: aur_builder

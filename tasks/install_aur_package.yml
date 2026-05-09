@@ -16,9 +16,9 @@
   kewlfft.aur.aur:
     name:
       - visual-studio-code-bin
-      # - cctv-viewer-git
+      - cctv-viewer-git
       # - thonny
-      # - nordvpn-bin
+      - nordvpn-bin
       # - easyeda-pro-bin
       # - brother-hll2300d
     state: latest

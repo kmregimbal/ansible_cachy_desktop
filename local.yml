@@ -10,8 +10,7 @@
       changed_when: false
 
   tasks:
-    - name: Include tasks
-      ansible.builtin.include_tasks:
-        - tasks/fix_kevin_shell.yml
+    - name: Fix Kevin Shell
+      ansible.builtin.include_tasks: tasks/fix_kevin_shell.yml
 #        - tasks/packages.yml
 #        - tasks/instal_aur_package.yml

@@ -1,0 +1,6 @@
+- name: Install AUR package
+  kewlfft.aur.aur:
+    name: yay
+    state: present
+  become: yes
+  became_user: aur_builder

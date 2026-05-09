@@ -3,3 +3,5 @@
     src: "files/CCTV Viewer.conf"
     dest: "~kevin/.config/CCTV Viewer/"
     mode: "0660"
+    owner: kevin
+    group: kevin

@@ -11,11 +11,12 @@
 
   tasks:
     - name: Loop through various tasks
-      ansible.builtin.include_tasks: "{{ item }}"
+      ansible.builtin.include_tasks: "tasks/{{ item }}"
       loop:
-        - tasks/fix_kevin_shell.yml
-        - tasks/packages.yml
-        - tasks/install_aur_package.yml
-        - tasks/fix_mdns.yml
-        - tasks/configure_cctv.yml
-        - tasks/make_vim_default.yml
+        - fix_kevin_shell.yml
+        - packages.yml
+        - install_aur_package.yml
+        - fix_mdns.yml
+        - configure_cctv.yml
+        - make_vim_default.yml
+        - copy_ssh_stuff.yml

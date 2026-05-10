@@ -1,4 +1,4 @@
-- name: Copy ssh authorized_keys
+- name: Copy ssh files
   ansible.builtin.copy:
     src: "files/{{ src_file }}"
     dest: "~kevin/.ssh/"

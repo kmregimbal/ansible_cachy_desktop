@@ -1,7 +1,7 @@
 - name: Play for cachyos
   hosts: localhost
   connection: local
-  #become: true
+  become: true
 
   pre_tasks:
     - name: Update repositories

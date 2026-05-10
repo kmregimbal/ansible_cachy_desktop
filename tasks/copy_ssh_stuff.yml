@@ -1,6 +1,6 @@
 - name: Copy ssh authorized_keys
   ansible.builtin.copy:
-    src: "files/{{ item }}""
+    src: "files/{{ item }}"
     dest: "~kevin/.ssh/"
     mode: "0600"
     owner: kevin

@@ -22,6 +22,7 @@
       - nordvpn-bin
       # - easyeda-pro-bin
       # - brother-hll2300d
+      - 1password
     state: present
     update_cache: true
   become: true

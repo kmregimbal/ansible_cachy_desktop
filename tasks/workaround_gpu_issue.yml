@@ -1,7 +1,7 @@
 - name: Copy GPU workarounds
   ansible.builtin.copy:
     src: "files/{{ src_app_file }}"
-    desk: "~kevin/.local/share/applications/"
+    dest: "~kevin/.local/share/applications/"
     mode: "0600"
     owner: kevin
     group: kevin

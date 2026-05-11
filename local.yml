@@ -24,3 +24,4 @@
         - configure_cctv.yml
         - make_vim_default.yml
         - copy_ssh_stuff.yml
+        - workaround_gpu_issue.yml

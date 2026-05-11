@@ -1,0 +1,13 @@
+- name: Copy GPU workarounds
+  ansible.builtin.copy:
+    src: "files/{{ src_app_file }}"
+    desk: "~kevin/.local/share/applications/"
+    mode: "0600"
+    owner: kevin
+    group: kevin
+  loop:
+    - cctv-viewer.desktop
+    - code.desktop
+    - vivaldi-stable.desktop
+  loop_control:
+    loop_var: src_app_file

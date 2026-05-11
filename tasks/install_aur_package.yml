@@ -2,6 +2,7 @@
   ansible.builtin.user:
     name: aur_builder
     create_home: true
+    system: true
 
 - name: Allow aur_builder to sudo pacman
   ansible.builtin.lineinfile:

@@ -11,4 +11,5 @@
     - vivaldi-stable.desktop
   loop_control:
     loop_var: src_app_file
-  when: ansible_facts['ansible_board_version'] == "MacBookAir4,2"
+  #when: ansible_facts['ansible_board_version'] == "MacBookAir4,2"
+

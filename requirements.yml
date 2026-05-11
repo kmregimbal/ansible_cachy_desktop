@@ -1,0 +1,5 @@
+---
+
+collections:
+  - name: kewlfft.aur
+    version: ">=0.13.0"

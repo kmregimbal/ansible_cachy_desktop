@@ -1,7 +1,7 @@
 - name: Play to set up host for full ansible playbook
   hosts: localhost
   connection: local
-  become: true
+  #become: true
 
   tasks:
     - name: Install requirements

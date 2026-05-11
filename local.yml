@@ -9,6 +9,12 @@
         update_cache: true
       changed_when: false
 
+  handlers:
+    - name: restart_systemd_resolved
+      ansible.builtin.service:
+        name: systemd-resolved
+        state: restarted
+
   tasks:
     - name: Loop through various tasks
       ansible.builtin.include_tasks: "tasks/{{ item }}"

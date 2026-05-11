@@ -10,12 +10,8 @@
       changed_when: false
 
   handlers:
-    - name: Loop through handlers
-      ansible.builtin.import_tasks: "handlers/{{ handler_file }}"
-      loop:
-        - restart_systemd_resolved.yml
-      loop_control:
-        loop_var: handler_file
+    - name: Import handler to restart systemd-resolved
+      ansible.builtin.import_tasks: handlers/restart_systemd_resolved.yml
 
   tasks:
     - name: Loop through various tasks

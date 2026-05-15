@@ -9,4 +9,7 @@
       - avahi
       - vivaldi
       - tailscale
+      - plasma-x11-session
+      - kwin-x11
+      - xorg-server
     state: present
